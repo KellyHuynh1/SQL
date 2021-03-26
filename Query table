@@ -9,3 +9,25 @@ INSERT INTO movies VALUES (6, "Disney's Up", 2009, 135);
 
 SELECT* FROM movies WHERE release_year >1999 ORDER BY release_year;
 SELECT SUM (length) FROM movies;
+-----------------------------
+
+CREATE TABLE store (ID INTEGER PRIMARY KEY, item TEXT, price INTEGER, stock INTEGER, quantity_sold INTEGER); 
+
+INSERT INTO store VALUES (1, "bikes", 90, 10, 1);
+INSERT INTO store VALUES (2, "t-shirts", 10, 50, 35);
+INSERT INTO store VALUES (3, "jeans", 25, 40, 40);
+INSERT INTO store VALUES (4, "sunglasses", 10, 10, 0);
+INSERT INTO store VALUES (5, "jumper", 30, 25, 21);
+INSERT INTO store VALUES (6, "hairband", 2, 200, 67);
+INSERT INTO store VALUES (7, "socks_blue", 6, 30, 28);
+INSERT INTO store VALUES (8, "socks_green", 5, 30, 17);
+INSERT INTO store VALUES (9, "socks_red", 5, 30, 21);
+INSERT INTO store VALUES (10, "chinos", 25, 40, 34);
+INSERT INTO store VALUES (11, "scarf", 15, 15, 12);
+INSERT INTO store VALUES (12, "hat", 10, 10, 1);
+INSERT INTO store VALUES (13, "beanie", 7, 25, 11);
+
+SELECT*FROM store ORDER BY price;
+
+SELECT SUM (quantity_sold) FROM store;
+SELECT item, price FROM store WHERE price > 5;
